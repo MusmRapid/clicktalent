@@ -27,7 +27,7 @@ const FooterComp = () => {
       </div>
 
       <footer className="w-full">
-        <div className="flex flex-col items-center justify-between w-full max-w-5xl gap-4 px-6 py-4 m-auto text-sm border-t border-gray-800 md:gap-4 md:flex-row">
+        <div className="flex items-center justify-between w-full max-w-5xl gap-4 px-6 py-4 m-auto text-sm border-t border-gray-800 md:gap-4 md:flex-row">
           <div className="font-bold">ClickTalent</div>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-xl hover:opacity-75">
@@ -36,7 +36,7 @@ const FooterComp = () => {
           </div>
         </div>
         <div>
-          <div className="flex flex-col items-center  w-full max-w-5xl gap-8 px-6 pb-4  m-auto  border-gray-800 md:gap-4 md:flex-row">
+          <div className="flex flex-col w-full max-w-5xl gap-8 px-6 pb-4  m-auto  border-gray-800 md:gap-4 md:flex-row">
             <a href="#" className="text-gray-500 font-semibold hover:underline">
               For Employers
             </a>
