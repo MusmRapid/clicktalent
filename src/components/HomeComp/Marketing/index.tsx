@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 const marketingTags = [
   { label: "PRODUCT MARKETING", icon: "PM", color: "bg-yellow-300" },
@@ -23,13 +23,18 @@ const ScrollingRow: React.FC<{ reverse?: boolean }> = ({ reverse = false }) => {
         transition={{
           repeat: Infinity,
           repeatType: "loop",
-          duration: 60,
-          ease: "linear"
+          duration: 10,
+          ease: "linear",
         }}
       >
         {[...marketingTags, ...marketingTags].map((tag, idx) => (
-          <div key={idx} className="flex items-center text-3xl font-black shrink-0">
-            <span className={`px-3 py-1 mr-3 text-black rounded-full ${tag.color}`}>
+          <div
+            key={idx}
+            className="flex items-center text-3xl font-black shrink-0"
+          >
+            <span
+              className={`px-3 py-1 mr-3 text-black rounded-full ${tag.color}`}
+            >
               {tag.icon}
             </span>
             {tag.label}
@@ -43,15 +48,19 @@ const ScrollingRow: React.FC<{ reverse?: boolean }> = ({ reverse = false }) => {
 const MarketingScroller = () => {
   return (
     <div className="px-4 py-16 text-center">
-      <h2 className="mb-8 text-[24px] font-semibold">Marketing experts across disciplines</h2>
+      <h2 className="mb-8 tedxt-lg md:text-[24px] font-semibold">
+        Marketing experts across disciplines
+      </h2>
 
       <div className="space-y-6">
-        <ScrollingRow reverse={false} />
         <ScrollingRow reverse={true} />
         <ScrollingRow reverse={false} />
+        <ScrollingRow reverse={true} />
       </div>
 
-      <p className="mt-10 text-gray-600">Find the right fractional marketer to reach your goals.</p>
+      <p className="mt-10 text-gray-600">
+        Find the right fractional marketer to reach your goals.
+      </p>
       <button className="px-6 py-2 mt-4 font-semibold text-white bg-black rounded-full hover:bg-gray-900">
         Start Hiring
       </button>

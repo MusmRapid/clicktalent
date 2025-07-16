@@ -9,6 +9,7 @@ import image6 from "../../../assets/heroimage_6.png";
 import image7 from "../../../assets/heroimage_7.png";
 import image8 from "../../../assets/heroimage_8.png";
 import image9 from "../../../assets/heroimage_9.png";
+import { div } from "framer-motion/client";
 
 const steps = [
   {
@@ -81,13 +82,28 @@ const steps = [
     title: "Hire and manage",
     description: "Hire an expert, start the work, and let us handle the admin.",
     content: (
-      <div className="flex justify-center mt-4">
-        <div className="bg-white p-4 rounded-xl shadow w-[300px] text-left text-sm">
-          <p className="font-semibold text-gray-600">YourCompany · 4:55 PM</p>
-          <p className="mt-2 text-gray-800">
-            Hi, we've loved your profile and are excited to talk more about this
-            project. What time would be best to schedule a call tomorrow?
-          </p>
+      <div>
+        <div className="flex items-start space-x-3 mt-4 justify-center">
+          {/* Icon */}
+          <div className="relative top-[7rem]">
+            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+              {/* You can replace this emoji with an <img src="/your-logo.png" /> */}
+              <span className="text-white text-xl">👋</span>
+            </div>
+          </div>
+
+          {/* Message box */}
+          <div className="bg-white p-4 rounded-xl shadow w-[300px] text-left text-sm">
+            <p className="font-semibold text-gray-600">YourCompany · 4:55 PM</p>
+            <p className="mt-2 text-gray-800">
+              Hi, we’ve loved your profile and are excited to talk more about
+              this project. What time would be best to schedule a call tomorrow?
+            </p>
+          </div>
+        </div>
+        <div className="bg-gray-100 p-2 rounded-xl shadow w-[300px] text-left text-sm mt-2 flex gap-4">
+          <p className=" text-gray-500 font-medium text-sm">Filip Wroblewski</p>
+          <p className=" text-gray-500 text-sm opacity-20">4:55 PM</p>
         </div>
       </div>
     ),
@@ -106,10 +122,10 @@ const fadeInUp = {
 const StepsSection: React.FC = () => {
   return (
     <section className="px-6 py-20 bg-white md:px-12">
-      <div className="uppercase text-[40px] font-bold text-center mb-4 md:mb-16">
-        Three Simple Steps
+      <div className="uppercase text-2xl md:text-[40px] font-bold text-center mb-8 md:mb-16">
+        <div>Three Simple Steps</div>
       </div>
-      <div className="grid max-w-6xl gap-12 mx-auto text-center md:grid-cols-3">
+      <div className=" flex flex-col md:grid md:max-w-6xl gap-12 mx-auto text-center md:grid-cols-3">
         {steps.map((step, index) => (
           <motion.div
             key={index}

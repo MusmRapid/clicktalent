@@ -1,56 +1,36 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
-import image1 from '../../../assets/heroimage_1.png'
-import image2 from '../../../assets/heroimage_2.png';
-import image3 from '../../../assets/heroimage_3.png';
-import image4 from '../../../assets/heroimage_4.png';
-import image5 from '../../../assets/heroimage_5.png';
-import image6 from '../../../assets/heroimage_6.png';
-import image7 from '../../../assets/heroimage_7.png';
-import image8 from '../../../assets/heroimage_8.png';
-import image9 from '../../../assets/heroimage_9.png';
-import image10 from '../../../assets/heroimage_10.png';
-import { Link } from "react-router-dom";
+import image1 from "../../../assets/heroimage_1.png";
+import image2 from "../../../assets/heroimage_2.png";
+import image3 from "../../../assets/heroimage_3.png";
+import image4 from "../../../assets/heroimage_4.png";
+import image5 from "../../../assets/heroimage_5.png";
+import image6 from "../../../assets/heroimage_6.png";
+import image7 from "../../../assets/heroimage_7.png";
+import image8 from "../../../assets/heroimage_8.png";
+import image9 from "../../../assets/heroimage_9.png";
+import image10 from "../../../assets/heroimage_10.png";
+import NavbarDesktop from "../../Navbar/NavbarDesktop";
 
 const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
 ];
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="overflow-hidden rounded-2xl bg-heroBlue">
-      <div className="flex items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-4">
-          <div className="text-2xl font-black">L</div>
-          <div className="flex items-center gap-2">
-            <Link to={"/"}>
-              <div className="px-3 py-1 font-semibold text-black rounded-md bg-black/10">
-              For Employers
-            </div>
-            </Link>
-            <Link to={"/marketing"}>
-              <div className="font-medium text-black/70">
-                For Marketing Talent
-              </div>
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <button className="font-medium text-black">Log In</button>
-          <button className="px-4 py-2 font-semibold text-white bg-black rounded-full">
-            Apply as a Marketer
-          </button>
-        </div>
+    <div className="overflow-hidden rounded-2xl bg-heroBlue m-2">
+      <div className="hidden md:block">
+        <NavbarDesktop />
       </div>
 
       <div className="flex flex-col items-center justify-center px-4 mt-20 text-center">

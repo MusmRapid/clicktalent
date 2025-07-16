@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 import { faqData } from "../../../utils/faqData";
 
-
 const FAQs: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -26,7 +25,9 @@ const FAQs: React.FC = () => {
                 className="flex items-center justify-between w-full py-5 font-medium text-left text-textMoss"
                 onClick={() => toggleIndex(idx)}
               >
-                <span className="text-[24px] font-semibold">{faq.question}</span>
+                <span className="text-md md:text-[24px] font-semibold">
+                  {faq.question}
+                </span>
                 {activeIndex === idx ? (
                   <RxCross2 className="text-xl" />
                 ) : (
@@ -45,7 +46,7 @@ const FAQs: React.FC = () => {
                     className="overflow-hidden"
                   >
                     <div className="pb-5 text-[16px] font-normal text-black">
-                        {faq.answer}
+                      {faq.answer}
                     </div>
                   </motion.div>
                 )}
