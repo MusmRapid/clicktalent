@@ -17,7 +17,7 @@ const MarketPage: React.FC = () => {
       <MarketingScroller/>
       <FAQs/>
       <div className="md:py-10 md:px-36">
-        <FooterComp/>
+        <FooterComp mainText={"Looking to connect with top companies? "} yellowText={"APPLY NOW"} buttonText={"Apply as a Marketer"}/>
       </div>
    </>
   )

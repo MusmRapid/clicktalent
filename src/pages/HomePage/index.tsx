@@ -20,8 +20,8 @@ const HomePage: React.FC = () => {
       <StepsSection />
       <MarketingScroller />
       <FAQs />
-      <div className="md:py-10 md:px-10">
-        <FooterComp />
+      <div className="md:py-10 md:px-36">
+        <FooterComp mainText={"Looking to hire A high quality marketer?"} yellowText={"Schedule a call today."} buttonText={"Start Hiring"}/>
       </div>
     </>
   );

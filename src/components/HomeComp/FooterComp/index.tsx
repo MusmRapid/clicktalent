@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
+import type React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
-const FooterComp = () => {
+interface FooterProps {
+  mainText?: string;
+  yellowText?: string;
+  buttonText?: string;
+}
+
+const FooterComp: React.FC<FooterProps> = ({
+  mainText,
+  yellowText,
+  buttonText,
+}) => {
   return (
     <div className="flex flex-col w-full overflow-hidden text-white bg-black pt-14 md:rounded-2xl">
       <div className="flex items-center justify-center px-20 py-32 text-center ">
@@ -11,17 +22,17 @@ const FooterComp = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-2xl font-bold uppercase sm:text-4xl">
-            LOOKING TO HIRE A HIGH QUALITY MARKETER?
+            {mainText}
           </h1>
           <p className="mt-2 text-xl font-bold text-[#F3E16C] uppercase sm:text-2xl">
-            SCHEDULE A CALL TODAY.
+            {yellowText}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-2 mt-6 font-medium text-black bg-white rounded-full shadow"
           >
-            Start Hiring
+            {buttonText}
           </motion.button>
         </motion.div>
       </div>

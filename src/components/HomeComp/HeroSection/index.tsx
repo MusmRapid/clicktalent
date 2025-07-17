@@ -28,7 +28,7 @@ const images = [
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="overflow-hidden rounded-2xl bg-heroBlue m-2">
+    <div className="m-2 overflow-hidden rounded-2xl bg-heroBlue">
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
