@@ -1,5 +1,4 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
 
 const marketingTags = [
   { label: "PRODUCT MARKETING", icon: "PM", color: "bg-yellow-300" },
@@ -13,14 +12,17 @@ const marketingTags = [
 ];
 
 const ScrollingRow: React.FC<{ reverse?: boolean }> = ({ reverse = false }) => {
-  // Duplicate tags array so 50% scroll covers one set
   const tags = [...marketingTags, ...marketingTags];
   return (
     <div className="relative overflow-hidden">
       <div className={`scroll-track flex gap-10 ${reverse ? 'reverse' : ''}`}>
         {tags.map((tag, idx) => (
           <div key={idx} className="flex items-center text-3xl font-black shrink-0">
-            <span className={`px-3 py-1 mr-3 text-black rounded-full ${tag.color}`}>{tag.icon}</span>
+            <span
+              className={`px-3 py-1 mr-3 text-black rounded-full ${tag.color}`}
+            >
+              {tag.icon}
+            </span>
             {tag.label}
           </div>
         ))}
@@ -45,7 +47,7 @@ const MarketingScroller: React.FC = () => (
     <button className="px-6 py-2 mt-4 font-semibold text-white bg-black rounded-full hover:bg-gray-900">
       Start Hiring
     </button>
-    <style jsx>{`
+    <style>{`
       .scroll-track {
         display: flex;
         width: 200%;
