@@ -25,27 +25,36 @@ const images = [
   image10,
 ];
 const HeroSection: React.FC = () => {
-  // Tailwind w-14 → 3.5rem → 56px, gap-4 → 1rem → 16px
   const ITEM_WIDTH = 56;
   const GAP = 16;
-  // total shift = one full set of images sliding off
-  const SHIFT = (ITEM_WIDTH + GAP) * images.length; // 72px * 10 = 720px
+  const SHIFT = (ITEM_WIDTH + GAP) * images.length; 
   return (
-    <div className="m-2 overflow-hidden rounded-3xl bg-heroBlue">
-      {/* Navbar */}
+    <div className="relative m-2 overflow-hidden rounded-3xl bg-heroBlue md:min-h-[850px] flex flex-col justify-between">
+
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
-      {/* Headline + search */}
       <div className="flex flex-col items-center justify-center px-4 mt-20 text-center">
-        <h1 className="text-5xl max-w-4xl tracking-[-6px] font-bold leading-none text-black md:text-[104px]">
+        <motion.h1
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="text-5xl max-w-4xl tracking-[-6px] font-bold leading-none text-black md:text-[104px]">
           HIRE EXPERT MARKETERS ON DEMAND.
-        </h1>
-        <p className="max-w-md mt-6 text-sm md:text-[16px] text-black/70">
+        </motion.h1>
+        <motion.p 
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          className="max-w-md mt-6 text-sm md:text-[16px] text-black/70">
           Reach your business goals faster with the right fractional experts —
           matched to your needs.
-        </p>
-        <div className="relative w-full max-w-md mt-6">
+        </motion.p>
+        <motion.div 
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          className="relative w-full max-w-md mt-6">
           <input
             type="text"
             placeholder="What marketing talent are you looking for?"
@@ -54,12 +63,15 @@ const HeroSection: React.FC = () => {
           <div className="absolute p-3 -translate-y-1/2 bg-black rounded-full right-2 top-1/2">
             <FaSearch className="w-4 h-4 text-white" />
           </div>
-        </div>
+        </motion.div>
       </div>
-      {/* Seamless carousel */}
-      <div className="w-full mt-24 overflow-hidden bg-heroBlue">
+      <motion.div 
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+          className="w-full mt-24 overflow-hidden bg-heroBlue">
         <motion.div
-          className="flex flex-nowrap gap-4"
+          className="flex gap-4 flex-nowrap"
           initial={{ x: 0 }}
           animate={{ x: -SHIFT }}
           transition={{
@@ -68,17 +80,16 @@ const HeroSection: React.FC = () => {
             repeat: Infinity,
           }}
         >
-          {/* three copies back‑to‑back */}
           {[...images, ...images, ...images, ...images].map((src, idx) => (
             <img
               key={idx}
               src={src}
               alt={`marketer-${idx}`}
-              className="flex-none object-cover h-20 w-14 rounded-t-full"
+              className="flex-none object-cover h-20 rounded-t-full w-14"
             />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };

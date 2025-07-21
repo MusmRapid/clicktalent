@@ -1,23 +1,34 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+
 const NavbarDesktop = ({}) => {
   return (
     <div className="flex items-center justify-between pt-10 md:px-6 md:py-6">
       <div className="flex items-center gap-4">
-        {/* <div className="text-2xl font-black">L</div> */}
+
         <img src={logo} alt="Logo" className="w-8 h-8" />
 
         <div className="flex items-center gap-2">
-          <Link to={"/"}>
-            <div className="px-3 py-1 font-semibold text-black rounded-md bg-black/10">
-              For Employers
-            </div>
-          </Link>
-          <Link to={"/marketing"}>
-            <div className="font-medium text-black/70">
-              For Marketing Talent
-            </div>
-          </Link>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              isActive
+                ? "px-3 py-1 font-semibold text-black rounded-md bg-black/10"
+                : "px-3 py-1 font-semibold text-black/70 rounded-md hover:bg-black/5"
+            }
+          >
+            For Employers
+          </NavLink>
+          <NavLink
+            to={"/marketing"}
+            className={({ isActive }) =>
+              isActive
+                ? "px-3 py-1 font-semibold text-black rounded-md bg-black/10"
+                : "px-3 py-1 font-medium text-black/70 rounded-md hover:bg-black/5"
+            }
+          >
+            For Marketing Talent
+          </NavLink>
         </div>
       </div>
       <div className="flex items-center gap-4">

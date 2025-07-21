@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { SiNike, SiHubspot, SiGoogletagmanager, SiSlack, SiZapier, SiTrello, SiArc } from "react-icons/si";
+import { SiNike, SiHubspot, SiGoogletagmanager, SiSlack, SiZapier, SiTrello, SiArc, SiGmail, SiXubuntu } from "react-icons/si";
 
 const steps = [
   {
@@ -63,7 +63,7 @@ const steps = [
     title: "Match",
     description: "Get matched to projects from companies.",
     content: (
-      <div className="flex flex-wrap justify-center gap-3 mt-4">
+      <div className="grid grid-cols-3 gap-2 mx-auto text-center md:grid-cols-3">
         {[
           { icon: <SiArc />, label: "Arc" },
           { icon: <SiNike />, label: "Nike" },
@@ -72,6 +72,8 @@ const steps = [
           { icon: <SiTrello />, label: "Trello" },
           { icon: <SiHubspot />, label: "HubSpot" },
           { icon: <SiZapier />, label: "Zapier" },
+          { icon: <SiGmail/>, label: "Gmail"},
+          { icon: <SiXubuntu/>, label: "Ubuntu"  }
         ].map((item, idx) => (
           <div
             key={idx}
@@ -99,7 +101,7 @@ const HowItWorks: React.FC = () => {
   return (
     <section className="px-6 py-20 bg-white md:px-12">
       <div className="uppercase text-[40px] font-bold text-center mb-4 md:mb-16">
-        Three Simple Steps
+        How It Works in 3 Simple Steps
       </div>
       <div className="grid max-w-6xl gap-12 mx-auto text-center md:grid-cols-3">
         {steps.map((step, index) => (

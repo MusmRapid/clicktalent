@@ -64,23 +64,22 @@ const ScrollingRow: React.FC<{ tags: Tag[]; reverse?: boolean }> = ({
   );
 };
 
-const MarketingScroller: React.FC = () => (
+const MarketingScrollerSection: React.FC = () => (
   <div className="px-4 py-16 text-center">
     <h2 className="mb-8 text-lg md:text-[24px] font-semibold">
-      Marketing experts across disciplines
+      Marketing specialists across multiple disciplines
     </h2>
     <div className="space-y-6">
       <ScrollingRow tags={marketingTags1} reverse />
       <ScrollingRow tags={marketingTags2} />
       <ScrollingRow tags={marketingTags3} reverse />
     </div>
-    <p className="mt-10 text-gray-600">
-      Find the right fractional marketer to reach your goals.
+    <p className="max-w-2xl text-[16px] font-normal mx-auto mt-10 text-black">
+      Product Marketing, Growth, Content Marketing, Social Media, 
+      Copywriting, Email Marketing, Digital Marketing, Out-of-Home Marketing, 
+      Market Research, Project Management, Advertising Production, Content Creation, and more. 
     </p>
-    <button className="px-6 py-2 mt-4 font-semibold text-white bg-black rounded-full hover:bg-gray-900">
-      Start Hiring
-    </button>
   </div>
 );
 
-export default MarketingScroller;
+export default MarketingScrollerSection;

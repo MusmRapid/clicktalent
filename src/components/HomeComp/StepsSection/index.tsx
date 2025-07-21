@@ -9,7 +9,6 @@ import image6 from "../../../assets/heroimage_6.png";
 import image7 from "../../../assets/heroimage_7.png";
 import image8 from "../../../assets/heroimage_8.png";
 import image9 from "../../../assets/heroimage_9.png";
-import { div } from "framer-motion/client";
 
 const steps = [
   {
@@ -83,12 +82,12 @@ const steps = [
     description: "Hire an expert, start the work, and let us handle the admin.",
     content: (
       <div>
-        <div className="flex items-start space-x-3 mt-4 justify-center">
+        <div className="flex items-start justify-center mt-4 space-x-3">
           {/* Icon */}
           <div className="relative top-[7rem]">
-            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+            <div className="flex items-center justify-center w-8 h-8 bg-green-500 rounded-full">
               {/* You can replace this emoji with an <img src="/your-logo.png" /> */}
-              <span className="text-white text-xl">👋</span>
+              <span className="text-xl text-white">👋</span>
             </div>
           </div>
 
@@ -102,8 +101,8 @@ const steps = [
           </div>
         </div>
         <div className="bg-gray-100 p-2 rounded-xl shadow w-[300px] text-left text-sm mt-2 flex gap-4">
-          <p className=" text-gray-500 font-medium text-sm">Filip Wroblewski</p>
-          <p className=" text-gray-500 text-sm opacity-20">4:55 PM</p>
+          <p className="text-sm font-medium text-gray-500 ">Filip Wroblewski</p>
+          <p className="text-sm text-gray-500  opacity-20">4:55 PM</p>
         </div>
       </div>
     ),
@@ -125,7 +124,7 @@ const StepsSection: React.FC = () => {
       <div className="uppercase text-2xl md:text-[40px] font-bold text-center mb-8 md:mb-16">
         <div>Three Simple Steps</div>
       </div>
-      <div className=" flex flex-col md:grid md:max-w-6xl gap-12 mx-auto text-center md:grid-cols-3">
+      <div className="flex flex-col gap-12 mx-auto text-center  md:grid md:max-w-6xl md:grid-cols-3">
         {steps.map((step, index) => (
           <motion.div
             key={index}
