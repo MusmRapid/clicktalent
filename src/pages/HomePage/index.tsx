@@ -10,7 +10,7 @@ import NavbarMobile from "../../components/Navbar/NavbarMobile";
 const HomePage: React.FC = () => {
   return (
     <>
-      <div className="md:py-10 md:px-36">
+      <div className="md:py-4 md:px-[10.5rem]">
         <div className="md:hidden">
           <NavbarMobile />
         </div>
@@ -21,7 +21,11 @@ const HomePage: React.FC = () => {
       <MarketingScroller />
       <FAQs />
       <div className="md:py-10 md:px-36">
-        <FooterComp mainText={"Looking to hire A high quality marketer?"} yellowText={"Schedule a call today."} buttonText={"Start Hiring"}/>
+        <FooterComp
+          mainText={"Looking to hire A high quality marketer?"}
+          yellowText={"Schedule a call today."}
+          buttonText={"Start Hiring"}
+        />
       </div>
     </>
   );

@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
   // total shift = one full set of images sliding off
   const SHIFT = (ITEM_WIDTH + GAP) * images.length; // 72px * 10 = 720px
   return (
-    <div className="m-2 overflow-hidden rounded-2xl bg-heroBlue">
+    <div className="m-2 overflow-hidden rounded-3xl bg-heroBlue">
       {/* Navbar */}
       <div className="hidden md:block">
         <NavbarDesktop />
@@ -42,7 +42,8 @@ const HeroSection: React.FC = () => {
           HIRE EXPERT MARKETERS ON DEMAND.
         </h1>
         <p className="max-w-md mt-6 text-sm md:text-[16px] text-black/70">
-          Reach your business goals faster with the right fractional experts — matched to your needs.
+          Reach your business goals faster with the right fractional experts —
+          matched to your needs.
         </p>
         <div className="relative w-full max-w-md mt-6">
           <input

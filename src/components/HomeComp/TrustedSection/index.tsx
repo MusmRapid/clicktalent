@@ -10,11 +10,15 @@ const TrustedSection: React.FC = () => {
       <h1 className="mt-6 text-[12px] text-smallText font-bold uppercase">
         Trusted by forward thinking teams
       </h1>
-      <div className="flex flex-col items-center justify-around mt-4 md:flex-row">
-        <img src={image1} alt="Company 1" className="h-20 md:h-32" />
-        <img src={image2} alt="Company 2" className="h-20 md:h-32" />
-        <img src={image3} alt="Company 3" className="h-20 md:h-32" />
-        <img src={image4} alt="Company 4" className="h-20 md:h-32" />
+      <div className="flex  items-center justify-around md:justify-center mt-4 flex-row">
+        <div className="md:flex">
+          <img src={image1} alt="Company 1" className="h-20 md:h-32" />
+          <img src={image2} alt="Company 2" className="h-20 md:h-32" />
+        </div>
+        <div className="md:flex ">
+          <img src={image3} alt="Company 3" className="h-20 md:h-32" />
+          <img src={image4} alt="Company 4" className="h-20 md:h-32" />
+        </div>
       </div>
     </div>
   );

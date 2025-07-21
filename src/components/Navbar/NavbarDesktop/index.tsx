@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-
+import logo from "../../../assets/logo.png";
 const NavbarDesktop = ({}) => {
   return (
-    <div className="flex items-center justify-between pt-10 md:px-6 md:py-4">
+    <div className="flex items-center justify-between pt-10 md:px-6 md:py-6">
       <div className="flex items-center gap-4">
-        <div className="text-2xl font-black">L</div>
+        {/* <div className="text-2xl font-black">L</div> */}
+        <img src={logo} alt="Logo" className="w-8 h-8" />
+
         <div className="flex items-center gap-2">
           <Link to={"/"}>
             <div className="px-3 py-1 font-semibold text-black rounded-md bg-black/10">

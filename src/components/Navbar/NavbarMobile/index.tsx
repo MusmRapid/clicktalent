@@ -1,13 +1,15 @@
 import { useState } from "react";
-
+import logo from "../../../assets/logo.png";
 const NavbarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
       {/* Top bar */}
-      <div className="flex items-center justify-between px-4 py-2">
-        <div className="text-2xl font-black">L</div>
+      <div className="flex items-center justify-between px-4 py-4">
+        {/* <div className="text-2xl font-black">L</div> */}
+        <img src={logo} alt="Logo" className="w-6 h-6" />
+
         <div className="flex items-center gap-4">
           <button
             className="px-4 py-2 text-sm font-semibold text-white bg-black rounded-full"
@@ -29,9 +31,10 @@ const NavbarMobile = () => {
 
       {/* Slide-out menu */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full bg-white z-50 flex flex-col p-2">
+        <div className="fixed top-0 left-0 w-full bg-white z-50 flex flex-col p-4">
           <div className="flex items-center justify-between mb-6">
-            <div className="text-2xl font-black">L</div>
+            {/* <div className="text-2xl font-black">L</div> */}
+            <img src={logo} alt="Logo" className="w-6 h-6" />
             <div className="flex items-center gap-4">
               <button
                 className="px-4 text-sm py-2 font-semibold text-white bg-black rounded-full"
