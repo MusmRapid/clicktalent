@@ -33,12 +33,12 @@ const HeroSection: React.FC = () => {
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
-      <div className="flex flex-col items-center justify-center px-4 mt-20 text-center">
+      <div className="flex flex-col items-center justify-center px-4 mt-12 text-center md:mt-20">
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="text-[3.25rem] max-w-4xl tracking-[-2px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px]"
+          className="text-[3.25rem] max-w-4xl tracking-[-2px] font-bold leading-[5.25rem] text-black md:text-[4.5rem] lg:text-[104px]"
         >
           HIRE EXPERT MARKETERS ON DEMAND.
         </motion.h1>
@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-        className="w-full mt-24 overflow-hidden bg-heroBlue"
+        className="w-full mt-16 overflow-hidden bg-heroBlue"
       >
         <motion.div
           className="flex gap-4 flex-nowrap"
