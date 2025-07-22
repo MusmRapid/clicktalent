@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="text-[3.5rem] max-w-4xl tracking-[-6px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px]"
+          className="text-[3.25rem] max-w-4xl tracking-[-2px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px]"
         >
           HIRE EXPERT MARKETERS ON DEMAND.
         </motion.h1>
