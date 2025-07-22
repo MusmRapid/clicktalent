@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
   const GAP = 16;
   const SHIFT = (ITEM_WIDTH + GAP) * images.length;
   return (
-    <div className="relative m-2 overflow-hidden rounded-3xl bg-heroBlue md:min-h-[850px] flex flex-col justify-between">
+    <div className="relative m-2 overflow-hidden rounded-3xl bg-heroBlue md:h-[95vh] flex flex-col justify-between">
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>

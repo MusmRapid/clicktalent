@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
-    <div className="relative pb-32 m-2 md:pb-2 overflow-hidden rounded-3xl bg-marketGreen md:min-h-[850px]">
+    <div className="relative pb-32 m-2 overflow-hidden md:pb-2 rounded-3xl bg-marketGreen md:h-[95vh]">
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="text-[3.5rem] max-w-4xl tracking-[-2px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px] uppercase"
+          className="text-[3.5rem] max-w-4xl tracking-[-2px] md:tracking-[-4px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px] uppercase"
         >
           Earn extra income with your marketing skills
         </motion.h1>

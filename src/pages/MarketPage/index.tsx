@@ -11,7 +11,7 @@ import WhyJoinSection from "../../components/MarketingComp/WhyJoinSection";
 const MarketPage: React.FC = () => {
   return (
     <>
-      <div className="md:py-4 lg:px-4 2xl:px-36">
+      <div className="md:py-4 lg:px-4 3xl:px-36">
         <div className="md:hidden">
           <NavbarMobile />
         </div>

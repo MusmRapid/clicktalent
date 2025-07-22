@@ -11,6 +11,9 @@ export default {
         faqBack: '#F5F5F5',
         marketGreen: '#A5DF9F'
       },
+      screens: {
+        '3xl': '100rem'
+      }
     },
   },
   plugins: [],
