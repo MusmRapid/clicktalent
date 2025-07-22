@@ -124,7 +124,7 @@ const StepsSection: React.FC = () => {
       <div className="uppercase text-2xl md:text-[40px] font-bold text-center mb-8 md:mb-16">
         <div>Three Simple Steps</div>
       </div>
-      <div className="flex flex-col gap-12 mx-auto text-center  md:grid md:max-w-6xl md:grid-cols-3">
+      <div className="flex flex-col gap-12 mx-auto text-center  lg:grid md:max-w-6xl md:grid-cols-3">
         {steps.map((step, index) => (
           <motion.div
             key={index}

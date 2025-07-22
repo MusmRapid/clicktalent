@@ -27,10 +27,9 @@ const images = [
 const HeroSection: React.FC = () => {
   const ITEM_WIDTH = 56;
   const GAP = 16;
-  const SHIFT = (ITEM_WIDTH + GAP) * images.length; 
+  const SHIFT = (ITEM_WIDTH + GAP) * images.length;
   return (
     <div className="relative m-2 overflow-hidden rounded-3xl bg-heroBlue md:min-h-[850px] flex flex-col justify-between">
-
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
@@ -39,22 +38,25 @@ const HeroSection: React.FC = () => {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="text-5xl max-w-4xl tracking-[-6px] font-bold leading-none text-black md:text-[104px]">
+          className="text-[3.5rem] max-w-4xl tracking-[-6px] font-bold leading-none text-black md:text-[4.5rem] lg:text-[104px]"
+        >
           HIRE EXPERT MARKETERS ON DEMAND.
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="max-w-md mt-6 text-sm md:text-[16px] text-black/70">
+          className="max-w-md mt-6 text-sm md:text-[16px] text-black/70"
+        >
           Reach your business goals faster with the right fractional experts —
           matched to your needs.
         </motion.p>
-        <motion.div 
+        <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-          className="relative w-full max-w-md mt-6">
+          className="relative w-full max-w-md mt-6"
+        >
           <input
             type="text"
             placeholder="What marketing talent are you looking for?"
@@ -65,11 +67,12 @@ const HeroSection: React.FC = () => {
           </div>
         </motion.div>
       </div>
-      <motion.div 
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-          className="w-full mt-24 overflow-hidden bg-heroBlue">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+        className="w-full mt-24 overflow-hidden bg-heroBlue"
+      >
         <motion.div
           className="flex gap-4 flex-nowrap"
           initial={{ x: 0 }}

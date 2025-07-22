@@ -1,11 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 
 const NavbarDesktop = ({}) => {
   return (
     <div className="flex items-center justify-between pt-10 md:px-6 md:py-6">
       <div className="flex items-center gap-4">
-
         <img src={logo} alt="Logo" className="w-8 h-8" />
 
         <div className="flex items-center gap-2">
@@ -32,9 +31,18 @@ const NavbarDesktop = ({}) => {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <button className="font-medium text-black">Log In</button>
+        <button className="font-medium text-black">
+          <Link to="https://app.clicktalent.com/login" target="_blank">
+            Log In
+          </Link>
+        </button>
         <button className="px-4 py-2 font-semibold text-white bg-black rounded-full">
-          Apply as a Marketer
+          <Link
+            to="https://app.clicktalent.com/signup/account?type=talent"
+            target="_blank"
+          >
+            Apply as a Marketer
+          </Link>
         </button>
       </div>
     </div>
