@@ -13,17 +13,8 @@ import NavbarDesktop from "../../Navbar/NavbarDesktop";
 const HeroSection: React.FC = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
-  const positions = [
-    "top-32 left-40",
-    "top-32 right-12",
-    "top-[60%] left-4",
-    "top-[55%] right-28",
-    "bottom-10 left-[20%]",
-    "-bottom-12 right-[30%]",
-  ];
-
   return (
-    <div className="relative pb-32 m-2 overflow-hidden rounded-3xl bg-marketGreen md:min-h-[850px]">
+    <div className="relative pb-32 m-2 md:pb-2 overflow-hidden rounded-3xl bg-marketGreen md:min-h-[850px]">
       <div className="hidden md:block">
         <NavbarDesktop />
       </div>
@@ -42,8 +33,8 @@ const HeroSection: React.FC = () => {
             z-0
             ${idx === 0 ? "left-2 top-20 md:left-20 md:top-32" : ""}
             ${idx === 1 ? "right-2 top-20 md:right-12 md:top-32" : ""}
-            ${idx === 2 ? "left-2 top-[60%] md:left-4 md:top-[60%]" : ""}
-            ${idx === 3 ? "right-2 top-[55%] md:right-28 md:top-[55%]" : ""}
+            ${idx === 2 ? "left-2 hidden md:block top-[60%] md:left-4 md:top-[60%]" : ""}
+            ${idx === 3 ? "right-2 top-[55%] hidden md:block md:right-28 md:top-[55%]" : ""}
             ${idx === 4 ? "left-[10%] bottom-4 md:left-[20%] md:bottom-10" : ""}
             ${
               idx === 5

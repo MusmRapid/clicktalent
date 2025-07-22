@@ -11,7 +11,7 @@ import WhyJoinSection from "../../components/MarketingComp/WhyJoinSection";
 const MarketPage: React.FC = () => {
   return (
     <>
-      <div className="md:py-4 md:px-4">
+      <div className="md:py-4 md:px-36">
         <div className="md:hidden">
           <NavbarMobile />
         </div>
@@ -22,7 +22,7 @@ const MarketPage: React.FC = () => {
       <WhyJoinSection />
       <HowItWorks />
       <FAQs />
-      <div className="py-2 md:py-10 px-2 md:px-4">
+      <div className="px-2 py-2 md:py-10 md:px-4">
         <FooterComp
           mainText={"Looking to connect with top companies? "}
           yellowText={"APPLY NOW"}
